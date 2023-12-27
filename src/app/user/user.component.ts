@@ -12,6 +12,10 @@ import { HomeComponent } from '../home/home.component';
 })
 export class UserComponent {
   username= 'Margarita';
-  isLoggedIn = true;
+  isLoggedIn = false;
+
+  greet(){
+    alert('Hola 😊')
+  }
 
 }

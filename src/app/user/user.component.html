@@ -2,11 +2,14 @@
 
 @if(isLoggedIn){
   <p>Bienvenido, {{username}}</p>
-  <img  src="https://github.com/MargaritaAlvarezGonz">
+  <img
+  (click)="greet()"
+  src="/src/assets/foto2.jpg">
 } @else{
   <p>Debes iniciar sesión</p>
+  <button (click)="isLoggedIn=true">Log In</button>
 }
-<app-home></app-home>
+<app-home username="{{username}}"></app-home>
 </section>
 
 
