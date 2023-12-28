@@ -1,6 +1,18 @@
-<p>Hello {{username}}</p>
+<section>
+<h2>Hello {{username}}, you are a {{occupation}} </h2>
 @if (isUserExists) {
   <p>Congratulation! you are logged</p>
 }@else {
   <p>Sorry, you are not logged</p>
 }
+
+<h2>These are your favorite essential oils:</h2>
+<ul>
+  @for(oil of essentialOils; track oil.id ){
+  <li (mouseover)="onMouseOver(oil.name)">{{oil.name}}</li>
+  }
+</ul>
+<div class="editable-div"[contentEditable]="isEditable">
+</div>
+<button (click)="emitToParent()">Message to parent</button>
+</section>
